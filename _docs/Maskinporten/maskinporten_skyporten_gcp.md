@@ -69,7 +69,7 @@ gcloud iam workload-identity-pools providers create-oidc $PROVIDER_ID \
     --location="global" \
     --workload-identity-pool=$WORKLOAD_POOL_ID \
     --attribute-mapping="attribute.maskinportenscope"="assertion.scope","google.subject"="assertion.consumer.ID","attribute.clientaccess"="\"client::\" + assertion.consumer.ID + \"::\" + assertion.scope" \
-    --issuer-uri="https://sky.maskinporten.dev/" \
+    --issuer-uri="https://test.sky.maskinporten.no" \
     --allowed-audiences=$REQUIRED_AUDIENCE \
     --description="OIDC identity pool provider for Maskinporten"
 ```
